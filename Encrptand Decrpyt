@@ -1,0 +1,18 @@
+<html >
+<head>
+<title>Encryption App </title>
+</head>
+<body>
+<h1>Encryption and Decryption App</h1>
+<br/>
+<h2>Encrypt</h2>
+<form>
+<label>Data to encrypt: </label>
+<input name="encrpyt" type="text" value=""/>
+<br/>
+<label>Key :</label>
+<input name="" type="text" value=""/>
+<label>Data to Decrypt :</label>
+<input name="decrypt" type="text" value=""/>
+<input type="submit" name="submit" value="Submit"/>
+</html>
