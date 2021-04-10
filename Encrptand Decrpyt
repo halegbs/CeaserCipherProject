@@ -1,18 +1,31 @@
-<html >
-<head>
-<title>Encryption App </title>
-</head>
-<body>
-<h1>Encryption and Decryption App</h1>
-<br/>
-<h2>Encrypt</h2>
-<form>
-<label>Data to encrypt: </label>
-<input name="encrpyt" type="text" value=""/>
-<br/>
-<label>Key :</label>
-<input name="" type="text" value=""/>
-<label>Data to Decrypt :</label>
-<input name="decrypt" type="text" value=""/>
-<input type="submit" name="submit" value="Submit"/>
-</html>
+#include <iostream>
+
+using namespace std;
+// this is an application to encrpty and decrpytp using substitution method.
+ 
+ int main ()
+ {
+      int choice ;
+      cout << "Press 1 to encrypt" << endl <<"Press 2 to decrypt" << endl << "Enter choice(1 or 2): ";
+      cin >> choice;
+      cin.ignore();
+      
+            if (choice == 1){
+                  // for encrpytion
+                  String msg;
+                  cout<< "Enter only Alphabetical message";
+                  getline(cin,msg);
+                  //key for this application is 4 , since we are using 4 shift
+                  int key= 4;
+                  
+            }else if (choice ==2){
+                // decrpytion
+                string encrpytMsg;
+                cout <<"Enter only alphabetical data."<< endl;
+                cout << " Enter encrpyted text :";
+            }else {
+              cout<< "Invalid Entry";
+            }
+            
+            return 0;
+ }
