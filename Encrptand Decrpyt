@@ -12,12 +12,30 @@ using namespace std;
       
             if (choice == 1){
                   // for encrpytion
-                  String msg;
+                  string msg;
                   cout<< "Enter only Alphabetical message";
                   getline(cin,msg);
                   //key for this application is 4 , since we are using 4 shift
                   int key= 4;
+                  cin.ignore();
                   
+                  string encrpytedText= msg;
+                         for (int i =0; i<msg.size(); i ++){
+                            if(msg[i]==32){
+                             continue;
+                            }else{
+                                 if ((msg[i]+key)> 122) {
+                                     int temp =(msg[i] + key) -122;
+                                     encrpytedText[i] =96 + temp;
+                                 }else if (msg[i] + key > 90 && msg[i]<=96) {
+                                      int temp = (msg[i] + key)- 90;
+                                       encrpytedText[i] =64 +temp;
+                                     }else{
+                                         encrpytedText[i] +=key;
+                                      }
+                            }
+                         }
+                      cout<< "The encrpyted text is : " << encrpytedText;
             }else if (choice ==2){
                 // decrpytion
                 string encrpytMsg;
