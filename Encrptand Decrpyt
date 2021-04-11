@@ -40,10 +40,38 @@ using namespace std;
                 // decrpytion
                 string encrpytMsg;
                 cout <<"Enter only alphabetical data."<< endl;
-                cout << " Enter encrpyted text :";
+                cout << "Enter encrpyted text :";
+                getline(cin, encrpytMsg);
+                 int decrypKey = 4;
+                 cin.ignore();
+                 
+                 string decryptedText =  encrpytMsg;
+                 for (int i=0; i<encrpytMsg.size(); i++){
+                     if(encrpytMsg==32){
+                       continue;
+                     }else{
+                         if((encrpytMsg[i] - decrypKey) < 97 && (encrpytMsg[i] -decrypKey) > 90  ){
+                              int temp =(encrpytMsg[i] - decrypKey) +26;
+                              decryptedText[i] =temp;
+                         
+                         } else if ((encrpytMsg[i] -decrypKey) < 65 ){
+                             int temp =(encrpytMsg[i] - decrypKey) +26;
+                             decryptedText[i] =temp;
+                            
+                            }else {
+                                decryptedText[i] = encrpytMsg[i] -  decrypKey;
+                            }
+                      }
+                 
+                   }
+                 
+                 
+                cout <<"The Decrypted text is : "<< decryptedText<< endl;
+                
+                
             }else {
-              cout<< "Invalid Entry";
+                 cout<< "Invalid Entry";
             }
             
-            return 0;
+    return 0;
  }
